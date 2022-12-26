@@ -49,7 +49,7 @@ export default function NavTop() {
       )
       .then((res) => res.data);
 
-    const menuAll = categorias.map(({ name, slug }) => ({
+    const menuAll = categorias.map(({ name, slug }: any) => ({
       name,
       slug,
       icon: slug,

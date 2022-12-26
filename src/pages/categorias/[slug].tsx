@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import { useRouter } from "next/router";
-import axios from "axios";
 
 import Page from "../../components/Page";
 import Content from "../../components/Content";

@@ -1,2 +1,9 @@
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: https://querocashback.com.br
+
+# Sitemaps
+Sitemap: https://querocashback.com.br/sitemap.xml
