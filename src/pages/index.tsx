@@ -22,14 +22,19 @@ export default function Home(props: any) {
 }
 
 // export async function getStaticPaths() {
-//   const categorias = await axios.get(`${process.env.API_CATEGORIAS}`).then(res => res.data)
+//   const categorias = await axios
+//     .get(`${process.env.API_CATEGORIAS}`)
+//     .then((res) => res.data);
 
-//   const paths = categorias.map(({ slug }) => ( slug ? { params: slug } : null ))
+//   const paths = categorias.map(({ slug }: any) =>
+//     slug ? { params: slug } : null
+//   );
+//   paths.unshift({ params: "/" });
 
 //   return {
 //     paths,
-//     fallback: true
-//   }
+//     fallback: true,
+//   };
 // }
 
 // export const getStaticProps: GetStaticProps = async () => {
@@ -37,33 +42,16 @@ export default function Home(props: any) {
 //     .get(`${process.env.API_CATEGORIAS}`)
 //     .then((res) => res.data);
 
-//   const menu = categorias.map(({ name, slug }) => ({
+//   const menu = categorias.map(({ name, slug }: any) => ({
 //     name,
 //     slug,
 //     icon: slug,
 //   }));
 //   menu.pop();
 
-//   const destaquesRef = [
-//     "Informática",
-//     "Telefonia",
-//     "Eletrônicos",
-//     "Eletrodomésticos",
-//     "Moda, Beleza e Perfumaria",
-//   ];
-//   let destaques = [];
-//   menu.map((item: any) => {
-//     let ref = destaquesRef.filter((i) => i === item.name);
-//     if (ref.length) {
-//       destaques.push(item);
-//     }
-//   });
-//   destaques[3].name = "Moda e Beleza";
-
 //   return {
 //     props: {
 //       menu,
-//       destaques,
 //     },
 //   };
 // };

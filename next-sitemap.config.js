@@ -4,5 +4,6 @@
 module.exports = {
   siteUrl: process.env.SITE_URL || "https://querocashback.com.br",
   generateRobotsTxt: true, // (optional)
+  changefreq: "daily",
   // ...other options
 };
