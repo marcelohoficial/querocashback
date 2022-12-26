@@ -4,13 +4,13 @@ import { useState } from "react";
 import NavTop from "../NavTop";
 
 export default function Header() {
-  const router = useRouter()
+  const router = useRouter();
   const [busca, setBusca] = useState("");
 
   function handleSearch(word: any) {
-    let encode = encodeURIComponent(word)
+    let encode = encodeURIComponent(word);
 
-    router.push(`/buscar/${encode}`)
+    router.push(`/buscar/${encode}`);
   }
 
   return (

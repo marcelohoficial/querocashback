@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { useRouter } from "next/router";
+import axios from "axios";
 
 import Page from "../../components/Page";
 import Content from "../../components/Content";
@@ -9,10 +11,12 @@ export default function Categorias() {
   const routes = useRouter();
 
   return (
-    <Page 
-      title={`Catégorias - ${routes.query.slug ? routes.query.slug : ''}`} 
-      description={`Veja as melhores ofertas para ${routes.query.slug ? routes.query.slug : ''}, e compre ainda mais barato com cashback!`} 
-      path={`/categorias/${routes.query.slug ? routes.query.slug : ''}`}
+    <Page
+      title={`Catégorias - ${routes.query.slug ? routes.query.slug : ""}`}
+      description={`Veja as melhores ofertas para ${
+        routes.query.slug ? routes.query.slug : ""
+      }, e compre ainda mais barato com cashback!`}
+      path={`/categorias/${routes.query.slug ? routes.query.slug : ""}`}
     >
       <Header />
       <div className="flex">
@@ -22,4 +26,3 @@ export default function Categorias() {
     </Page>
   );
 }
-
