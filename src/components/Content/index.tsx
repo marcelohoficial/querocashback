@@ -2,6 +2,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
+import { offersRef } from "../../pages/api/ofertas/offers-ref";
 import InfiniteScroll from "../InfiniteScroll";
 import Loading from "../Loading";
 import ProductBox from "../ProductBox";
@@ -28,30 +29,39 @@ export default function Content() {
 
   async function getOffers() {
     setLoading(true);
-    let newOfertas = []
+    let newOfertas = [];
 
-    if(page === 1) setOfertas([])
+    if (page === 1) setOfertas([]);
 
-    if(routes.query.slug) {      
-      if(routes.asPath.includes('buscar')) {
-        newOfertas = await getApiOffers(`/api/buscar/${routes.query.slug}/?page=${page}`)
+    if (routes.query.slug) {
+      if (routes.asPath.includes("buscar")) {
+        newOfertas = await getApiOffers(
+          `/api/buscar/${routes.query.slug}/?page=${page}`
+        );
       } else {
-        newOfertas = await getApiOffers(`/api/buscar/category/?category=${routes.query.slug}&page=${page}`)
+        newOfertas = await getApiOffers(
+          `/api/buscar/category/?category=${routes.query.slug}&page=${page}`
+        );
       }
     } else {
-      newOfertas = await getApiOffers(`/api/ofertas/?page=${page}`)
+      newOfertas = await getApiOffers(`/api/ofertas/?page=${page}`);
     }
-  
+
     setOfertas(ofertas.concat(newOfertas));
 
     setLoading(false);
   }
 
   async function getApiOffers(url: any) {
+    if (url)
+      setTimeout(() => {
+        return offersRef;
+      }, 7000);
+
     let apiOffers = await axios
-        .get(`${url}`)
-        .then((res) => res.data)
-        .then((res) => res);
+      .get(`${url}`)
+      .then((res) => res.data)
+      .then((res) => res);
 
     return apiOffers;
   }

@@ -1,5 +1,5 @@
-import axios from "axios";
 import type { NextApiRequest, NextApiResponse } from "next";
+import { offersRef } from "../ofertas/offers-ref";
 
 type Data = {
   id: number;
@@ -33,24 +33,7 @@ export default async function handler(
 ) {
   const page = Number(req.query.page);
 
-  if (typeof page == "number" && page >= 1) {
-    if(req.query.category) {
-      var ofertas = await axios
-        .get(
-          `https://admin.pechinchou.com.br/api/v2/produto/listar_produtos_por_opcao/${req.query.category}/?page=${page}`
-        )
-        .then((res) => res.data)
-        .then((res) => res.results);
-    } else {
-      var ofertas = await axios
-        .get(
-          `https://admin.pechinchou.com.br/api/v2/produto/listar_produtos_por_opcao/search/${req.query.slug}/?page=${page}`
-        )
-        .then((res) => res.data)
-        .then((res) => res.results);
-    }
-  }
+  if (typeof page == "number" && page >= 1) var ofertas = offersRef;
 
-  // category/telefonia
   return res.status(200).json(ofertas);
 }

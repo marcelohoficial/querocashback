@@ -1,6 +1,6 @@
 import axios from "axios";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export type NavTopMenuProps = {
   name: string;
@@ -45,7 +45,7 @@ export default function NavTop() {
   async function getMenu() {
     const categorias = await axios
       .get(
-        `https://admin.pechinchou.com.br/api/v2/gerenciamento/listar_categorias_sem_paginacao_name/`
+        `https://admin.mavieoffers.com.br/api/v2/gerenciamento/listar_categorias_sem_paginacao_name/`
       )
       .then((res) => res.data);
 

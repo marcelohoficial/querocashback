@@ -5,7 +5,7 @@ export default function Sidebar() {
     {
       title: "Receba Ofertas Relâmpago",
       icon: "/icons/whatsapp.svg",
-      link: 'https://chat.whatsapp.com/EFOJ1Mhl4l0IdGIQXLmuKD',
+      link: "#",
       description:
         "Receba as melhores ofertas no seu Whatsapp na hora e não perca nenhuma oferta relâmpago.",
       button: "Receber Ofertas",
@@ -14,7 +14,7 @@ export default function Sidebar() {
     {
       title: "Receba Ofertas no Telegram",
       icon: "/icons/telegram.svg",
-      link: '',
+      link: "#",
       description:
         "Receba as melhores ofertas no seu Telegram na hora e não perca nenhuma oferta!",
       button: "Receber Ofertas",
