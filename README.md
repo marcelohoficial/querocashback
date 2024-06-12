@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Quero Cash Back
 
-## Getting Started
+Welcome to **Quero Cash Back**, a full-stack project designed to list products on offer from the largest and best websites in Brazil, with discounts of up to 90%. Users can search for specific products or browse by category, making it easy to find the best deals available online.
 
-First, run the development server:
+![Demo](https://github.com/marcelohoficial/querocashback/blob/master/public/demo.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [License](#license)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Introduction
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Quero Cash Back aims to provide users with a comprehensive platform to find the best product deals across major Brazilian e-commerce sites. By aggregating offers and providing an intuitive search functionality, users can easily discover and benefit from significant discounts.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Features
 
-## Learn More
+- **Product Listings**: Display a wide range of products from partner stores with up to 90% discount.
+- **Search Functionality**: Search for specific products easily.
+- **Category Browsing**: Browse products by categories for more targeted shopping.
+- **Direct Store Links**: Users can go directly to the store of the desired product on offer.
+- **Group Participation**: Join WhatsApp or Telegram groups to receive offers directly on your phone.
+- **Real-Time Updates**: Frequent updates to ensure the latest deals are always available.
+- **User-Friendly Interface**: Simple and intuitive design for a seamless user experience.
 
-To learn more about Next.js, take a look at the following resources:
+### Upcoming Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Favorites and Notifications**: Mark favorite products and categories to receive notifications when items on your wishlist are on offer.
+- **Discounts or Cashback Options**: Choose between a discount on the product or cashback.
+- **User Accounts**: Register on the site to track all your purchases.
+- **Reward Points**: Earn points for every purchase made within the site, which can be accumulated and redeemed for prizes in a specific section of the site.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Technologies Used
 
-## Deploy on Vercel
+### Next.js
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Next.js is a powerful React framework that enables server-side rendering and static site generation, providing several advantages:
+- **Performance**: Optimized for speed and efficiency.
+- **Scalability**: Suitable for building large-scale applications.
+- **SEO-Friendly**: Server-side rendering improves search engine visibility.
+- **API Routes**: Simplifies the creation of API endpoints, making it ideal for full-stack applications.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Partner Store APIs
+
+Utilizing APIs from partner stores ensures that users have access to a vast selection of products and the best deals available online:
+- **Comprehensive Data**: Access to detailed product information and pricing.
+- **Real-Time Availability**: Ensures users see the latest offers and discounts.
+- **Integration**: Seamlessly fetch and display data from multiple sources.
+
+## License
+
+This project is licensed under a custom license. The license allows viewing the code and using it for testing purposes with authorization but does not permit modifications.
+
+---
+
+Thank you for using Quero Cash Back! Our goal is to make finding and benefiting from the best online deals as easy as possible. If you have any questions or feedback, please don't hesitate to reach out.
+
+---
+
+**Developed by Marcelo**  
+GitHub: [marcelohoficial](https://github.com/marcelohoficial)  
+Email: [marcelopromova@gmail.com](mailto:marcelopromova@gmail.com)
